@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국가 캐러셀</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .carousel-item img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">홈</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="korea.html">한국</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Rus.html">러시아</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="sweden.html">스웨덴</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="usa.html">미국</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 캐러셀 -->
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <a href="korea.html">
+                    <img src="https://media.istockphoto.com/id/1132287785/ko/%EB%B2%A1%ED%84%B0/%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD-%EA%B5%AD%EA%B8%B0.jpg?s=612x612&w=0&k=20&c=vWF_uEuO33QSsLNhZ49zHlh98WrU0nS4i4FBuwr7c6w=" class="d-block w-100" alt="한국">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="Rus.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png" class="d-block w-100" alt="러시아">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="sweden.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/4/4c/Flag_of_Sweden.svg" class="d-block w-100" alt="스웨덴">
+                </a>
+            </div>
+            <div class="carousel-item">
+                <a href="usa.html">
+                    <img src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" class="d-block w-100" alt="미국">
+                </a>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Bootstrap JS 및 Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9bRIeSTOSKxTg9aZxZ15a5+6x2G5I4D0X4FF0xA3q3aF1dO9xA0V" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0n6bqBJS4EGBhD5Jj+W8aMTT+EbISD6+UblfsQ1iGh8IkD+bK+X1w4U6Pyn9OgP5z" crossorigin="anonymous"></script>
+</body>
+</html>
