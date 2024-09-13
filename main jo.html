@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>국가 소개</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        .carousel {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel-images {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel-image {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .carousel img {
+            width: 100%;
+            height: auto;
+        }
+        .carousel-controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+        .carousel-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.7);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>국가 소개</h1>
+    </header>
+    <nav>
+        <a href="#">홈</a>
+        <a href="#">러시아</a>
+        <a href="#">미국</a>
+        <a href="#">한국</a>
+        <a href="#">스웨덴</a>
+    </nav>
+    <div class="carousel">
+        <div class="carousel-images">
+            <div class="carousel-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png" alt="러시아">
+            </div>
+            <div class="carousel-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png" alt="미국">
+            </div>
+            <div class="carousel-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Flag_of_South_Korea.svg/1920px-Flag_of_South_Korea.svg.png" alt="한국">
+            </div>
+            <div class="carousel-image">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Flag_of_Sweden.svg/1920px-Flag_of_Sweden.svg.png" alt="스웨덴">
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="carousel-button" id="prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-button" id="next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 국가 소개 웹 페이지</p>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+
+        const images = document.querySelector('.carousel-images');
+        const totalImages = document.querySelectorAll('.carousel-image').length;
+
+        document.getElementById('next').addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % totalImages;
+            updateCarousel();
+        });
+
+        document.getElementById('prev').addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            updateCarousel();
+        });
+
+        function updateCarousel() {
+            images.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>
