@@ -1,12 +1,66 @@
 <!doctype html>
 <html lang="en">
   <head>
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>미국 국가소개</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+      nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: block;
+        }
+        nav a:hover {
+            background: #555;
+        }
+        h1 {
+            margin: 0;
+        }
+        .flag {
+            text-align: center;
+            margin: 20px 0;
+        }
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .section-title {
+            color: #006aa7;
+            margin-bottom: 10px;
+        }
+        .fact {
+            margin: 5px 0;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+        }
+    </style>
+  
   </head>
   <body>
+    <nav>
+      <a href=".">홈</a>
+      <a href="./Rus.html">러시아</a>
+      <a href="./usa.html">미국</a>
+      <a href="./korea.html">한국</a>
+      <a href="./sweden.html">스웨덴</a>
+  </nav>
+
     <div class="container" style="margin-bottom: 50px;">
         <div style="text-align: center;">
             <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="data:image/png;base64,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" alt="Image" width="500" height="500" style="margin-top: 20px; margin-bottom: 40px;">
@@ -67,5 +121,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <footer>
+      <p>&copy; 2024 국가 소개 웹 페이지</p>
+  </footer>
   </body>
 </html>
